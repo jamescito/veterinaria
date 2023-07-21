@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('codigoproducto',50);
             $table->string('precio_venta',50);
             $table->string('descripcion_producto',50);
-            $table->$table->foreign('idventa')->references('idventa')->on('venta')->onDelete('cascade');
-            $table->$table->foreign('codigoproducto')->references('codigoproducto')->on('producto')->onDelete('cascade');
+            $table->foreign('idventa')->references('idventa')->on('venta')->onDelete('cascade');
+            $table->foreign('codigoproducto')->references('codigoproducto')->on('producto')->onDelete('cascade');
             $table->timestamps();
         });
     }

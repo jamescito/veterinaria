@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('codigoproducto',50);
             $table->string('precio_compra',50);
             $table->string('descripcion_producto',50);
-            $table->foreign('codigoproducto')->references('codigoproducto')->on('prodducto')->onDelete('cascade');
             $table->foreign('idcompra')->references('idcompra')->on('compra')->onDelete('cascade');
+            $table->foreign('codigoproducto')->references('codigoproducto')->on('producto')->onDelete('cascade');
             $table->timestamps();
         });
     }
